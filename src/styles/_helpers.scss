@@ -1,0 +1,21 @@
+.is-hidden {
+  display: none;
+}
+
+.is-disabled {
+  opacity: .5;
+  -ms-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.full {
+  width: 100%;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}

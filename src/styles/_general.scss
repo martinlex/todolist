@@ -1,0 +1,38 @@
+@import 'colors';
+
+body {
+  background: $color-grey-medium;
+  font-family: Arial, Helvetica;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  background: $color-grey-light;
+  min-height: 100vh;
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 2rem 6rem;
+}
+
+.text-input,
+.button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 5px;
+  box-shadow: none;
+  font-size: 1rem;
+  height: 42px;
+  padding: 6px 10px;
+}
+
+.button {
+  background: $color-blue;
+  border: 1px solid $color-blue;
+  color: $color-white;
+  cursor: pointer;
+}

@@ -1,0 +1,150 @@
+@import 'colors';
+
+.todo-title {
+  color: $color-grey-dark;
+  font-size: 1.5rem;
+  font-weight: normal;
+  letter-spacing: .5px;
+  margin: 2rem 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.todo {
+  display: block;
+  margin: 1rem;
+  position: relative;
+
+  &:after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+}
+
+.todo__input {
+  background-color: $color-white;
+  border: 1px solid $color-grey-medium;
+  position: relative;
+}
+
+.todo__button {
+  background-color: $color-green;
+  border: 1px solid $color-green;
+  height: 32px;
+  padding: 4px 8px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  transition: all .1s ease-in-out;
+
+  &:hover {
+    background: darken($color-green, 5%);
+  }
+}
+
+.error-message {
+  color: $color-red;
+  font-size: 13px;
+  margin: .5rem 0 0 .25rem;
+  position: absolute;
+}
+
+.todo-list {
+  color: $color-grey-dark;
+  font-size: 1.1rem;
+  margin: 2.5rem 0;
+  padding: 0 1rem;
+}
+
+.todo-list--empty-state {
+  color: $color-grey-medium-dark;
+  font-size: 1.4rem;
+  letter-spacing: .5px;
+  margin: 3rem;
+  text-align: center;
+}
+
+.todo-list__list-item {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  opacity: 1;
+  padding: .4rem 0;
+  transform: scale(1);
+  transition: all .2s linear;
+
+  &:before {
+    content: '•';
+    font-size: 1.5rem;
+    margin: 0 .5rem 0 0; }
+}
+
+.todo-list__list-item  + .todo-list__list-item {
+  border-top: 1px solid $color-grey-medium;
+}
+
+.todo-list__list-item  + .todo-list__list-item.is-deleted {
+  border-top: none;
+}
+
+.todo-list__list-item.is-deleted {
+  border-top: none;
+  opacity: .2;
+  transform: scale(.2);
+}
+
+.delete-icon,
+.check-icon {
+  border-radius: 2px;
+  cursor: pointer;
+  height: 18px;
+  margin: 0 0 0 8px;
+  opacity: .8;
+  padding: 2px;
+  transition: all .1s;
+  width: 18px;
+}
+
+.delete-icon {
+  background: $color-grey-medium;
+
+  &:hover {
+    background: $color-red;
+  }
+}
+
+.check-icon {
+  background: $color-green;
+
+  &:hover {
+    background: $color-green;
+  }
+}
+
+.spacer {
+  flex-grow: 1;
+}
+
+.tag {
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 0.9px;
+  margin: 0 0 0 8px;
+  padding: 4px 8px;
+  text-transform: uppercase;
+
+  &:before {
+    background-image: url(../images/tag.svg);
+    background-size: 12px 12px;
+    content: '';
+    display: block;
+    float: left;
+    height: 12px;
+    margin: 1px 4px 0 0;
+    opacity: .8;
+    width: 12px;
+  }
+}
